@@ -29,10 +29,8 @@ func main() {
 
 	message := message.Greeting(name, phrase)
 	err = ioutil.WriteFile("./motd", []byte(message), 0644)
+
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	fmt.Println("end")
-
 }
